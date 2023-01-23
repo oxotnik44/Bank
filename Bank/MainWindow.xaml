@@ -1,0 +1,84 @@
+﻿<Window x:Class="Bank.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000" MinHeight="650" MinWidth ="1000" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="46.305"/>
+            <ColumnDefinition Width="38.695"/>
+            <ColumnDefinition Width="42.232"/>
+            <ColumnDefinition Width="42.768"/>
+            <ColumnDefinition Width="41.837"/>
+            <ColumnDefinition Width="43.163"/>
+            <ColumnDefinition Width="38.989"/>
+            <ColumnDefinition Width="46.011"/>
+            <ColumnDefinition Width="39.82"/>
+            <ColumnDefinition Width="45.18"/>
+            <ColumnDefinition Width="38.199"/>
+            <ColumnDefinition Width="46.801"/>
+            <ColumnDefinition Width="43.935"/>
+            <ColumnDefinition Width="41.065"/>
+            <ColumnDefinition Width="41.087"/>
+            <ColumnDefinition Width="43.913"/>
+            <ColumnDefinition Width="37.014"/>
+            <ColumnDefinition Width="47.986"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="64*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="tbl_money" Grid.Column="15" Margin="0,17,59,0" TextWrapping="Wrap" Text="Деньги в каждый карман" VerticalAlignment="Top" Grid.ColumnSpan="7" FontStyle="Italic" Foreground="#FF213452" FontSize="22" HorizontalAlignment="Right" Width="259" Height="27" FontFamily="Arial"/>
+
+        <Rectangle x:Name="rect_stab" Grid.Column="2" Grid.Row="2" Stroke="#FFC2C0C0" Fill="#FFDEEBF7" Height="280" VerticalAlignment="Top" Margin="0,10,40,0" Grid.RowSpan="5" Grid.ColumnSpan="6">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FFDFEBF7" Direction="140" ShadowDepth="15" Opacity="0.9"  BlurRadius="15"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBlock x:Name="tbl_namedstability" Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" Text="Стабильный" FontWeight="Normal" TextAlignment="Center" Margin="26,23,0,0" FontSize="24" Height="32" VerticalAlignment="Top" Grid.ColumnSpan="5" HorizontalAlignment="Left" Width="170" FontFamily="Calibri"/>
+        <TextBlock x:Name="tbl_stability" Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" FontWeight="Normal" TextAlignment="Center" FontSize="16" HorizontalAlignment="Left" Width="166" Height="156" VerticalAlignment="Top" Margin="30,10,0,0" Grid.RowSpan="3" Grid.ColumnSpan="5" FontFamily="Calibri"><Run Text="Без пополнения "/><LineBreak/><Run Text="Без снятия"/><LineBreak/><Run Text="Без капитализации"/><LineBreak/><Run/><LineBreak/><Run Text="Минимальный срок"/><LineBreak/><Run Text="от 3 месяцев"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="tbl_stabilityprocent" Grid.Column="2" HorizontalAlignment="Left" Margin="42,41,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" Height="56" Grid.RowSpan="2" Grid.ColumnSpan="5"><Run Foreground="#FF002060" FontSize="35" Text="8%" FontWeight="Bold"/><Run Text=" "/><Run Foreground="#FF002060" FontSize="22" Text="годовых" FontWeight="Bold"/></TextBlock>
+
+        <Rectangle  x:Name="rect_opt" Grid.Column="8" Grid.Row="2" Stroke="#FFC2C0C0" Fill="#FFDEEBF7" Height="280" VerticalAlignment="Top" Margin="20,10,0,0" Grid.RowSpan="5" Grid.ColumnSpan="6" HorizontalAlignment="Left" Width="216">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FFDFEBF7" Direction="140" ShadowDepth="15" Opacity="0.9"  BlurRadius="15"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBlock x:Name="tbl_namedoptimali" Grid.Column="9" Grid.Row="2" TextWrapping="Wrap" Text="Оптимальный" FontWeight="Normal" TextAlignment="Center" Margin="3,23,0,0" FontSize="24" Height="32" VerticalAlignment="Top" Grid.ColumnSpan="5" HorizontalAlignment="Left" Width="172" FontFamily="Calibri"/>
+        <TextBlock x:Name="tbl_optimal" Grid.Column="8" Grid.Row="3" TextWrapping="Wrap" FontWeight="Normal" TextAlignment="Center" FontSize="16" HorizontalAlignment="Left" Width="198" Height="156" VerticalAlignment="Top" Margin="38,10,0,0" Grid.RowSpan="3" Grid.ColumnSpan="6" FontFamily="Calibri"><Run Text="Пополняемый"/><LineBreak/><Run Text="Есть возможность снятия"/><LineBreak/><Run Text="С капитализацией"/><LineBreak/><Run/><LineBreak/><Run Text="Минимальный срок"/><LineBreak/><Run Text="от 6 месяцев"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="tbl_optimalprocent" Grid.Column="9" HorizontalAlignment="Left" Margin="7,41,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" Height="56" Grid.RowSpan="2" Grid.ColumnSpan="4"><Run Foreground="#FF002060" FontSize="35" Text="5%" FontWeight="Bold"/><Run Text=" "/><Run Foreground="#FF002060" FontSize="22" Text="годовых" FontWeight="Bold"/></TextBlock>
+
+
+        <Rectangle x:Name="rect_standart" Grid.Column="14" Grid.Row="2" Stroke="#FFC2C0C0" Fill="#FFDEEBF7" Height="280" VerticalAlignment="Top" Margin="40,10,0,0" Grid.RowSpan="5" Grid.ColumnSpan="6">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FFDFEBF7" Direction="140" ShadowDepth="15" Opacity="0.9"  BlurRadius="15"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBlock x:Name="tbl_namedstandart" Grid.Column="15" Grid.Row="2" TextWrapping="Wrap" Text="Стандарт" FontWeight="Normal" TextAlignment="Center" Margin="18,28,24,0" FontSize="24" Height="32" VerticalAlignment="Top" Grid.ColumnSpan="5" FontFamily="Calibri" RenderTransformOrigin="0.703,0.541"/>
+        <TextBlock x:Name="tbl_standart1" Grid.Column="15" Grid.Row="3" TextWrapping="Wrap" FontWeight="Normal" TextAlignment="Center" FontSize="16" HorizontalAlignment="Left" Width="166" Height="156" VerticalAlignment="Top" Margin="18,10,0,0" Grid.RowSpan="3" Grid.ColumnSpan="5" FontFamily="Calibri"><Run Text="Пополняемый"/><LineBreak/><Run Text="Без снятия"/><LineBreak/><Run Text="Без капитализации"/><LineBreak/><Run/><LineBreak/><Run Text="Минимальный срок"/><LineBreak/><Run Text="от 3 месяцев"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="tbl_standartprocent" Grid.Column="15" HorizontalAlignment="Left" Margin="18,41,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" Height="56" Grid.RowSpan="2" Grid.ColumnSpan="5"><Run Foreground="#FF002060" FontSize="35" Text="6%" FontWeight="Bold"/><Run Text=" "/><Run Foreground="#FF002060" FontSize="22" Text="годовых" FontWeight="Bold"/></TextBlock>
+
+        <Button x:Name="bt_dohodcalculation" Grid.Column="7" Content="Рассчитать доход" Margin="23,21,29,0" Grid.Row="7" VerticalAlignment="Top" Background="#FF2C7DE0" BorderBrush="{x:Null}" Foreground="White" Grid.ColumnSpan="8" Height="39" FontSize="20" Click="bt_calculation_Click">
+            <Button.Effect>
+                <DropShadowEffect Color="#FFDEEBF7"/>
+            </Button.Effect>
+        </Button>
+
+    </Grid>
+</Window>
+
